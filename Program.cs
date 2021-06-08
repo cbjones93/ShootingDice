@@ -31,17 +31,33 @@ namespace ShootingDice
             SmackTalkingPlayer smack = new SmackTalkingPlayer();
             smack.Name = "Hugo";
             smack.Taunt = "Your father smells of elderberries!";
-            
+
             OneHigherPlayer higher = new OneHigherPlayer();
             higher.Name = "Cheater";
 
+            HumanPlayer human = new HumanPlayer();
+            human.Name = "Chad";
+
+            CreativeSmackTalkingPlayer creative = new CreativeSmackTalkingPlayer();
+            creative.Name = "Charles";
+            creative.Taunts.Add("No need for insults, your face says it all.");
+            creative.Taunts.Add("It’s not that I’m smarter than you, it’s just that you’re dumber than everyone else.");
+            creative.Taunts.Add("I like half of you half as well as I should like, and I like less than half of you half as well as you deserve!");
+
+            SoreLoserPlayer king = new SoreLoserPlayer();
+            king.Name = "King Henry";
+
+            SoreLoserUpperHalfPlayer cheaterKing = new SoreLoserUpperHalfPlayer();
+            cheaterKing.Name= "Queen of Hearts";
 
             player1.Play(large);
+
+
 
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smack, higher
+                player1, player2, player3, large, smack, higher, human, creative, king, cheaterKing
             };
 
             PlayMany(players);
